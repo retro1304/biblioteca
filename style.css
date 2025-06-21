@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #fff;
+}
+header {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+nav {
+  display: flex;
+  background: #eee;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+nav button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s;
+}
+nav button.active {
+  border-bottom: 3px solid #007bff;
+  font-weight: bold;
+}
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+/* Abas - conteúdo */
+section.tab-content {
+  display: none;
+}
+section.tab-content.active {
+  display: block;
+}
+/* Galeria */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.book {
+  flex: 0 1 calc(20% - 20px); /* 5 livros por linha com espaço */
+  max-width: 150px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.book:hover img {
+  transform: scale(1.05);
+}
+/* Formulário */
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form input, form textarea, form button {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+form button:hover {
+  background-color: #0056b3;
+}
+/* Detalhes do livro */
+#book-details img {
+  max-width: 200px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+#book-details h2 {
+  margin-top: 0;
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f1f1f1;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
